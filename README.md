@@ -96,6 +96,7 @@
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
+        multiDexEnabled true
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -119,6 +120,8 @@
 
        // FirebaseUI for Cloud Firestore
        implementation 'com.firebaseui:firebase-ui-firestore:4.1.0'
+       
+       implementation 'com.android.support:multidex:1.0.3'
 
        // FirebaseUI for Firebase Auth
        implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
