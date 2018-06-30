@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:gravity="end"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/note_timestamp_txt"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Yesterday"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_edit_black"/>
+
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/journal_edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/linear_layout"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:counterMaxLength="500"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/journal_edit_text"
+                android:layout_width="match_parent"
+                android:hint="Enter your note here"
+                android:maxLength="500"
+                android:lines="8"
+                android:gravity="start"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/journal_edit_text_layout"
+            android:text="save"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
