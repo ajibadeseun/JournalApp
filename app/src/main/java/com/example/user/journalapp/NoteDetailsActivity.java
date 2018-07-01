@@ -192,7 +192,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
-                  myNoteRef.setValue(null)
+                  myNoteRef.child(noteId).setValue(null)
                   .addOnSuccessListener(new OnSuccessListener<Void>() {
                       @Override
                       public void onSuccess(Void aVoid) {
